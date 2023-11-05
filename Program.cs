@@ -8,7 +8,7 @@ using System.Net;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Runtime.Remoting.Contexts;
 
-namespace ConsoleApp2
+namespace MultiEmail
 {
     internal class Program
     {
