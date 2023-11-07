@@ -21,24 +21,24 @@ namespace MultiEmail
             Excel.Worksheet worksheet = (Excel.Worksheet)workbook.Sheets[1];
             Excel.Range cell = worksheet.UsedRange;
 
+            int rowCount = cell.Rows.Count;
+            int columnCount = cell.Rows.Column;
+
             //Foreach loop to catch values
-            foreach (var item in cell.Value2)
+            for (int i = 1; i <= columnCount; i++)
             {
-                if (item != null)
+                for (int j = 1; i <= rowCount; i++)
                 {
-                    try
+                    if (cell.Cells[j, i] != null && cell.Value2[j, i] is string)
                     {
-                        SendMail(item);
+                        SendMail(cell.Value2[j, i]);
                     }
-                    catch (Exception)
+                    else
                     {
-                        Console.WriteLine("Check the excel file it could be FormatException");
+                        Console.WriteLine("Empty or not string format");
                     }
                 }
-                else
-                {
-                    Console.WriteLine("Cell is null!!!");
-                }
+
             }
         }
 
