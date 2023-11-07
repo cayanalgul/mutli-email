@@ -70,7 +70,7 @@ namespace MultiEmail
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error" + " " + ex.ToString());
+                Console.WriteLine("Error {0}", ex.ToString());
 
             }
         }
