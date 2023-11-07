@@ -24,7 +24,7 @@ namespace MultiEmail
             int rowCount = cell.Rows.Count;
             int columnCount = cell.Rows.Column;
 
-            //Foreach loop to catch values
+            //For loop to catch values
             for (int i = 1; i <= columnCount; i++)
             {
                 for (int j = 1; i <= rowCount; i++)
